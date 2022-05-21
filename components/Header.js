@@ -1,4 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
+import openseaLogo from '../assets/opensea.png'
+import Link from 'next/link'
+
 
 const style = {
     wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
@@ -13,13 +17,21 @@ const style = {
   }
 
 const Header = () => {
-  return (
-    <div className={style.wrapper}>
-        <link>
-        <div className={style.logo}></div>
-        </link>
+  return(
+  <div className={style.wrapper}>
+    <Link href="/">
+        <div className={style.logoContainer} >
+          <Image src={openseaLogo} height={40} width={40} />
+          <div className={style.logoText}>OpenSea</div>
+        </div>
+    </Link>
+    <div className={style.searchBar}>
+      <div className={style.searchIcon}>
+        
+      </div>
     </div>
-  )
+  </div>
+  ) 
 }
 
 export default Header
