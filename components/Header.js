@@ -3,8 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
-import {MdOutlineAccountBalanceWallet} from 'react-icons/md'
-
+import Connect from '../components/Connect'
 
 const style = {
     wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex h-[72px] `,
@@ -17,6 +16,7 @@ const style = {
     headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer px-[20px]`,
     headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer`,
   }
+
 
 const Header = () => {
   return(
@@ -45,7 +45,7 @@ const Header = () => {
           <CgProfile/>
       </div>
       <div className={style.headerIcon}>
-        <MdOutlineAccountBalanceWallet/>
+        <Connect/>
       </div>
     </div>
   </div>
