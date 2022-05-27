@@ -1,8 +1,9 @@
 import React from 'react'
+import {IoMdInformationCircleOutline} from 'react-icons/io'
 
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/XYrDUd8Kz4HLNdZql_Ebwk6vc2OCuaw0MeENa5k67kvDD_X7AEbmcbbHMbMZDDXH1WSUn9hUp2rQsOeTEN2NH9bbOe-3HC50qCrEMAI=s550')] before:bg-cover before:bg-center before:opacity-30 before:blur before:-webkit-mask: linear-gradient(rgb(255, 255, 255), transparent)`,
   contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `w-1/2`,
   title: `relative text-white text-[46px] font-semibold`,
@@ -12,9 +13,10 @@ const style = {
   button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,
   cardContainer: `rounded-[3rem]`,
   infoContainer: `h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white`,
-  author: `flex flex-col justify-center ml-4`,
+  author: `flex flex-col justify-center ml-4 mr-[22.5rem]`,
   name: ``,
-  infoIcon: `flex justify-end items-center flex-1 text-[#8a939b] text-3xl font-bold`,
+  nickname: `text-[#2081e2] hover:text-[#1868b7]`,
+  infoIcon: `flex items-center flex-1 text-[#8a939b] hover:text-white text-3xl font-bold`,
 }
 
 const Hero = () => {
@@ -30,7 +32,7 @@ const Hero = () => {
               OpenSea is the world&apos;s first and largest NFT marketplace
             </div>
             <div className={style.ctaContainer}>
-              <button className={style.accentedButton}>Explore</button>
+              <button className={style.accentedButton} href="https://opensea.io/explore-collections">Explore</button>
               <button className={style.button}>Create</button>
             </div>
           </div>
@@ -49,11 +51,14 @@ const Hero = () => {
               <div className={style.author}>
                 <div className={style.name}>Distance</div>
                 <a
-                  className="text-[#1868b7]"
+                  className={style.nickname}
                   href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/26295466185321165399678017206049401268544401990002960745176610597860968235009"
                 >
                   GrayArtist
                 </a>
+              </div>
+              <div className={style.infoIcon}>
+                <IoMdInformationCircleOutline/>
               </div>
             </div>
           </div>
