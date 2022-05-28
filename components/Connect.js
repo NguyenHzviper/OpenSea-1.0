@@ -14,7 +14,8 @@ const welcomeUser = (userName, toastHandler = toast) => {
       `Welcome back${userName !== 'Unnamed' ? ` ${userName}` : ''}!`,
       {
         style: {
-          background: '#04111d',
+          borderRadius: '10px',
+          background: '#333',
           color: '#fff',
         },
       }
@@ -40,9 +41,10 @@ function Connect() {
         })()
       }, [address])
 
-  return (
+  return (   
       <button className={style.button} onClick={() => connectWallet('injected')}>
           <MdOutlineAccountBalanceWallet/>
+          <Toaster position='top-center' reverseOrder={false}/>
       </button>
   )
 }

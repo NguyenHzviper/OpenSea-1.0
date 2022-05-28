@@ -5,6 +5,7 @@
 html{
     font-family: Poppins, sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 body {
   background-color: #202225;
