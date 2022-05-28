@@ -35,7 +35,7 @@ function Connect() {
           }
     
           const result = await client.createIfNotExists(userDoc)
-          
+
           welcomeUser(result.userName)
         })()
       }, [address])
