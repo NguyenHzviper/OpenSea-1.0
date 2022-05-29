@@ -3,14 +3,14 @@ import {IoMdInformationCircleOutline} from 'react-icons/io'
 
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/XYrDUd8Kz4HLNdZql_Ebwk6vc2OCuaw0MeENa5k67kvDD_X7AEbmcbbHMbMZDDXH1WSUn9hUp2rQsOeTEN2NH9bbOe-3HC50qCrEMAI=s550')] before:bg-cover before:bg-center before:opacity-30 before:blur before:-webkit-mask: linear-gradient(rgb(255, 255, 255), transparent)`,
-  contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://openseauserdata.com/files/spacedrip_launch_image_4x3.jpg')] before:bg-cover before:bg-center before:opacity-30 before:blur before:-webkit-mask: linear-gradient(rgb(255, 255, 255), transparent)`,
+  contentWrapper: `flex h-screen relative justify-center flex-wrap items-center mx-auto lg:h-[36.625rem]`,
   copyContainer: `w-1/2`,
   title: `relative text-white text-[46px] font-semibold`,
   description: `text-[#8a939b] container-[400px] text-2xl mt-[0.8rem] mb-[2.5rem]`,
   ctaContainer: `flex`,
   accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
-  button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,
+  button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer transition-all`,
   cardContainer: `rounded-[3rem]`,
   infoContainer: `h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white`,
   author: `flex flex-col justify-center ml-4 mr-[22.5rem]`,
@@ -18,6 +18,7 @@ const style = {
   nickname: `text-[#2081e2] hover:text-[#1868b7]`,
   infoIcon: `flex items-center flex-1 text-[#8a939b] hover:text-white text-3xl font-bold`,
 }
+
 
 const Hero = () => {
   return (
@@ -38,8 +39,8 @@ const Hero = () => {
           </div>
           <div className={style.cardContainer}>
             <img
-              className="rounded-t-lg"
-              src="https://lh3.googleusercontent.com/XYrDUd8Kz4HLNdZql_Ebwk6vc2OCuaw0MeENa5k67kvDD_X7AEbmcbbHMbMZDDXH1WSUn9hUp2rQsOeTEN2NH9bbOe-3HC50qCrEMAI=s550"
+              className="rounded-t-lg h-[34.375rem] w-[34.375rem]" 
+              src="https://openseauserdata.com/files/spacedrip_launch_image_4x3.jpg"
               alt=""
             />
             <div className={style.infoContainer}>

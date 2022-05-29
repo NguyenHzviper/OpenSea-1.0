@@ -13,8 +13,8 @@ const style = {
     searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,
     searchInput: `h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
     headerItems: ` flex items-center justify-end`,
-    headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer px-[20px]`,
-    headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer`,
+    headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer px-[20px] transition-all`,
+    headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer transition-all`,
   }
 
 
@@ -34,10 +34,9 @@ const Header = () => {
       <input className={style.searchInput} placeholder='Search items, collections, and accounts ' aria-multiline = "false"  />
     </div>
     <div className={style.headerItems}>
-      {/* <Link href="/collections/0x66113Ce1C3feE0dDC7B2B09DDa8981f330a36ee5">
+      <Link href="/collections/0x66113Ce1C3feE0dDC7B2B09DDa8981f330a36ee5">
         <div className={style.headerItem}>Collection</div>
-      </Link> */}
-      <div className={style.headerItem}>Explore</div>
+      </Link> 
       <div className={style.headerItem}>Stats</div>
       <div className={style.headerItem}>Resource</div>
       <div className={style.headerItem}>Create</div>
