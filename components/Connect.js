@@ -11,7 +11,7 @@ const style ={
 
 const welcomeUser = (userName, toastHandler = toast) => {
     toastHandler.success(
-      `Welcome back${userName !== 'Unnamed' ? ` ${userName}` : ''}!`,
+      `Connect Success${userName !== 'Unnamed' ? ` ${userName}` : ''}!`,
       {
         style: {
           borderRadius: '10px',
@@ -23,7 +23,7 @@ const welcomeUser = (userName, toastHandler = toast) => {
   }
 
 function Connect() {
-    const { address, connectWallet } = useWeb3()
+    const { address, connectWallet, disconnectWallet } = useWeb3()
     //Get wallet name and waller address to database
     useEffect(() => {
         if (!address) return
@@ -41,11 +41,21 @@ function Connect() {
         })()
       }, [address])
 
-  return (   
-      <button className={style.button} onClick={() => connectWallet('injected')}>
+  return (
+    <div>
+      {address && (
+          <button className={style.button} onClick={disconnectWallet}>
           <MdOutlineAccountBalanceWallet/>
           <Toaster position='top-center' reverseOrder={false}/>
       </button>
+      )}
+      {!address &&(
+         <button className={style.button} onClick={() => connectWallet('injected')}>
+         <MdOutlineAccountBalanceWallet/>
+         <Toaster position='top-center' reverseOrder={false}/>
+         </button>
+      )}
+    </div>   
   )
 }
 
