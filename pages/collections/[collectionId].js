@@ -38,6 +38,9 @@ const Collection= () => {
     const [collection, setCollection] = useState({})
     const [nfts, setNfts] = useState([])
     const [listings, setListings] = useState([])
+
+
+
     const nftModule = useMemo(() => {
       if (!provider) return
   
@@ -49,19 +52,17 @@ const Collection= () => {
     }, [provider])
   
     //get NFTs from collection
-  
     useEffect(() => {
-      if (!nftModule) return
-      ;(async () => {
+      if (!nftModule) return;
+    
+      (async () => {
         const nfts = await nftModule.getAll()
-  
         setNfts(nfts)
       })()
     }, [nftModule])
   
     const marketPlaceModule = useMemo(() => {
       if (!provider) return
-  
       const sdk = new ThirdwebSDK(
         provider.getSigner(),
         'https://rinkeby.infura.io/v3/c04ab8a4da4f40319011e3b57ec92efe'
@@ -73,8 +74,9 @@ const Collection= () => {
 
     //get all listing NFT in the collection
     useEffect(() => {
-      if (!marketPlaceModule) return
-      ;(async () => {
+      if (!marketPlaceModule) return;
+
+      (async () => {
         setListings(await marketPlaceModule.getAllListings())
       })()
     }, [marketPlaceModule])
